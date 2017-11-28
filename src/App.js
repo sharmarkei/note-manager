@@ -4,6 +4,14 @@ import Sidebar from './components/sidebar'
 import Editor from './components/editor'
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.change = this.change.bind(this);
+  }
+  change() {
+    console.log('changed');
+  }
   render() {
     return (
       <div className="App container">
@@ -11,7 +19,7 @@ class App extends Component {
 
         <div className="row">
           <Sidebar />
-          <Editor />
+          <Editor change={this.change}/>
         </div>
       </div>
     );

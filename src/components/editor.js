@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import 'milligram';
+
 import SimpleMDE from 'react-simplemde-editor';
 
 class Editor extends Component {
@@ -6,7 +8,7 @@ class Editor extends Component {
     return (
       <div className="editor column column-75">
         <SimpleMDE
-          onChange={this.handleChange}
+          onChange={this.props.change}
           value="Type Here"
         />
       </div>
